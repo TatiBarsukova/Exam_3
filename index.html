@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a6cd340976.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>CBD</title>
+</head>
+
+<body class="sitebody">
+    <header class="header" id="header">
+        <div class="header__inner">
+
+            <nav class="menu" id="menu">
+                <a class="menu__link active" href="#intro"> Home </a>
+                <a class="menu__link" href="#products">Products</a>
+                <a class="menu__link" href="#questions">FAQs</a>
+                <a class="menu__link" href="#contact">Contact Us</a>
+            </nav>
+
+            <button class="nav_toggle" id="nav_toggle" type="button">
+                <span class="nav_toggle__item">Menu</span>
+
+            </button>
+
+
+
+            <div class="logo">CBD</div>
+
+            <div class="header__button">
+                <button data-modal-id="#myModal" class="button__box button__login">login</button>
+                <input class="input__search" name="search" placeholder="I'm looking for...">
+                <button class="button__box button__search"><span class="search">
+                        <svg aria-hidden="true" focusable="false" width="16px" data-prefix="fal" data-icon="search"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"
+                            class="svg-inline--fa fa-search fa-w-16 fa-2x">
+                            <path fill="currentColor"
+                                d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                class=""></path>
+                        </svg>
+                    </span>
+                    Search</button>
+                <button class="button__box button__basket">Cart <span class="basket__quantity">(0)</span></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro" id="intro">
+        <div class="intro__container">
+            <div class="intro__inner">
+                <div class="signature__line"></div>
+                <div class="intro__signature">CBD Potion health</div>
+
+                <h1 class="intro__title">Enhancing Life Excelling in Care</h1>
+                <h3 class="intro__subtitle"> Choose Wisely. Choose CBD.</h3>
+
+                <div class="intro__link">
+                    <a href="#products" class="intro__button">Start Shopping <span class="intro__button_span line">
+                            <svg aria-hidden="true" width="40px" focusable="false" data-prefix="fal"
+                                data-icon="horizontal-rule" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewbox="0 0 640 445" class="span_line">
+                                <path fill="currentColor"
+                                    d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                    class=""></path>
+                            </svg>
+                        </span> </a>
+
+                    <a href="#shopping" class="intro__all"> See all products <span class="intro__all arrow">
+                            <svg class="span_arrow" width="21px" fill="#f7f8f3;" viewbox="0 0 24 18">
+                                <title>arrow-right-long</title>
+                                <path d="M17.59 7l5 5-5 5M0 12h22" fill="none" stroke="currentColor"
+                                    stroke-miterlimit="10" stroke-width="2"></path>
+
+                            </svg>
+                        </span> </a>
+                </div>
+            </div>
+        </div>
+        <div class="intro__footer">
+            <a class="scroll" href="#about">
+                <i class="fas fa-chevron-down intro__footer_icon"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="modal__container" id="myModal">
+        <div class="close__back"></div>
+        <div class="modal__item">
+            <button class="modal__close"><i class="fas fa-times"></i></button>
+            <div class="modal__content">
+                <header class="modal__header">
+                    <h3 class="modal__title">Sign in</h3>
+                </header>
+                <form class="modal__form" id="modal__form" method="post" name="form" onsubmit="return validated()">
+                    <div class="modal__inputwrapper">
+                        <label class="modal__label">Email</label>
+                        <input class="modal__input" type="email" id="modal__input_email" name="email">
+                        <span class="error_label_modal" id="modal_error_email">ERROR!!! You entered an invalid
+                            email!</span>
+                    </div>
+                    <div class="modal__inputwrapper">
+                        <label class="modal__label">Password</label>
+                        <input class="modal__input" type="password" id="modal__input_password" name="password">
+                        <span class="error_label_modal" id="modal_error_password">Please enter a password at least 5
+                            symbols.</span>
+
+                    </div>
+                    <div class="modal__inputwrapper">
+                        <div class="input__column">
+                            <input class="checkbox__input" type="checkbox" id="modal_spring_security_remember_me"
+                                name="modal_spring_security_remember_me">
+                            <label class="checkbox__label" for="modal_spring_security_remember_me">Remember me</label>
+                        </div>
+                    </div>
+                    <button class="modal__button" type="submit" id="modal__btn" onclick="validated()">Sing in</button>
+                </form>
+
+                <button class="button__regist" type="submit">register</button>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about" id="about">
+        <div class="about__header">
+            <h3 class="about__tagline">We are what we are</h3>
+            <div class="about__logos">
+            </div>
+        </div>
+
+        <div class="about__slider">
+
+            <ul class="slider__nav">
+                <li class="slider__item active">
+                    <a class="slider__link active" onclick="openTab(event, 'what')">WHAT IS CBD?</a>
+                </li>
+                <li class="slider__item">
+                    <a class="slider__link" onclick="openTab(event, 'benefits')">BENEFITS</a>
+                </li>
+                <li class="slider__item">
+                    <a class="slider__link" onclick="openTab(event, 'difference')">OUR
+                        DIFFERENCe</a>
+                </li>
+            </ul>
+
+
+            <div class="slider__body">
+                <div class="slider__container active" id="what">
+                    <div class="wrapper__slider">
+                        <div class="container__text">
+                            <p class="text__title">WHAT IT IS AND HOW IT WORKS</p>
+                            <p class="text__content">CBD is short for cannabidiol. It is a phytocannabinoid found in
+                                hemp
+                                and known for supporting the body and mind in many ways.* Charlotte’s Web products have
+                                cannabinoids with CBD extract.
+                                <br />
+                                <br />
+                                Not to be confused with oil from hemp seeds (which doesn’t contain cannabinoids), CBD
+                                comes
+                                from the flowers and leaves of the hemp plant.
+                                <br />
+                                <br />
+                                Why does CBD work? The human body has a vast network of receptors, the endocannabinoid
+                                system.
+                            </p>
+                        </div>
+
+                        <div class="container__img">
+                            <div class="img__content photo1"></div>
+                            <div class="img__content photo2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider__container" id="benefits">
+                    <div class="wrapper__slider">
+
+                        <div class="container__text">
+                            <p class="text__title">What are the medical benefits of marijuana?</p>
+                            <p class="text__content">Last year, a large review from the National Academies of Sciences,
+                                Engineering, and Medicine assessed more than 10,000 scientific studies on the medical
+                                benefits and adverse effects of marijuana.
+                                <br />
+                                <br />
+                                The review found that marijuana, or products containing cannabinoids — which are the
+                                active
+                                ingredients in marijuana, or other compounds that act on the same receptors in the brain
+                                as
+                                marijuana — are effective at relieving chronic pain.
+                            </p>
+                        </div>
+
+                        <div class="container__img">
+                            <div class="img__content photo3"></div>
+                            <div class="img__content photo4"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider__container" id="difference">
+                    <div class="wrapper__slider">
+
+                        <div class="container__text">
+                            <p class="text__title">CBD vs. THC: What’s the Difference?</p>
+                            <p class="text__content">As the legal use of hemp and other cannabis products grows,
+                                consumers
+                                are becoming more curious about their options. This includes cannabidiol (CBD) and
+                                tetrahydrocannabinol (THC), two natural compounds found in plants of the Cannabis genus.
+                                <br />
+                                <br />
+
+                                CBD can be extracted from hemp or cannabis.
+
+                                Hemp and cannabis come from the Cannabis sativa plant. Legal hemp must contain 0.3
+                                percent
+                                THC or less.
+                                <br />
+                                THC is the main psychoactive compound in cannabis that produces the high sensation. It
+                                can
+                                be consumed by smoking cannabis.
+                            </p>
+                        </div>
+
+                        <div class="container__img">
+                            <div class="img__content photo5"></div>
+                            <div class="img__content photo6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="products" id="products">
+        <div class="products__header">
+            <h3 class="products__textname">CBD Featured Products</h3>
+        </div>
+
+        <div class="wrapper" id="shopping">
+            <div class="carousel__container">
+                <div class="carousel__track">
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">CBD 500 mg Orange Flavor Tincture</div>
+                            <div class="product__img img1"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$49.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">Black ICE CBD Muscle Rub 200 mg</div>
+                            <div class="product__img img2"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$49.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">CBD+Curcumin Coffee 750 mg</div>
+                            <div class="product__img img3"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$79.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">CBD 500 mg Orange Flavor Tincture</div>
+                            <div class="product__img img1"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$49.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">Black ICE CBD Muscle Rub 200 mg</div>
+                            <div class="product__img img2"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$49.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">CBD+Curcumin Coffee 750 mg</div>
+                            <div class="product__img img3"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$79.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">CBD 500 mg Orange Flavor Tincture</div>
+                            <div class="product__img img1"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$49.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">Black ICE CBD Muscle Rub 200 mg</div>
+                            <div class="product__img img2"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$49.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item">
+                        <div class="product__container">
+                            <div class="stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="product__name">CBD+Curcumin Coffee 750 mg</div>
+                            <div class="product__img img3"></div>
+                        </div>
+                        <div class="product__buy">
+                            <div class="product__price">$79.99 USD</div>
+                            <button class="add__basket">Shop <span class="product__button_span"> <svg aria-hidden="true"
+                                        width="40px" focusable="false" data-prefix="fal" data-icon="horizontal-rule"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445"
+                                        class="span_line">
+                                        <path fill="currentColor"
+                                            d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                            class=""></path>
+                                    </svg></span> </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel__button">
+                <button class="btn__prev">←</button>
+                <button class="btn__next">→</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="questions" id="questions">
+        <div class="questions__container">
+            <h3 class="questions__title">Frequently asked questions</h3>
+
+            <div class="questions__item">
+                <div class="questions__item_title" id="t1" onclick="showAnswer(event)"><span
+                        class="questions_span">+</span>What is
+                    Cannabidiol
+                    (CBD)?</div>
+                <p class="questions__text" id="text1">Cannabidiol (CBD) is a phytocannabinoid discovered in
+                    1940. It is one of 113
+                    identified cannabinoids in cannabis plants, along with tetrahydrocannabinol (THC), and accounts for
+                    up to 40% of the plant's extract.</p>
+            </div>
+
+            <div class="questions__item">
+                <div class="questions__item_title" id="t2" onclick="showAnswer(event)"><span
+                        class="questions_span">+</span>Is Hemp-Derived
+                    Cannabidiol (CBD)
+                    Legal?</div>
+                <p class="questions__text" id="text2">Because CBD from hemp has no psychoactive effects, the purchase,
+                    sales, or
+                    possession of hemp CBD products are completely legal in all 50 States. </p>
+            </div>
+
+            <div class="questions__item">
+                <div class="questions__item_title" id="t3" onclick="showAnswer(event)"><span
+                        class="questions_span">+</span>Are there any
+                    negative side effects?
+                </div>
+                <p class="questions__text" id="text3">Though it's often well-tolerated, CBD can cause side effects, such
+                    as dry
+                    mouth, diarrhea, reduced appetite, drowsiness and fatigue. </p>
+            </div>
+
+            <div class="questions__item">
+                <div class="questions__item_title" id="t4" onclick="showAnswer(event)"><span
+                        class="questions_span">+</span>Do you offer a
+                    return
+                    policy?</div>
+                <p class="questions__text" id="text4">Our policy lasts 30 days. If 30 days have gone by since your
+                    purchase,
+                    unfortunately we can’t offer you a refund or exchange.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="testimonials" id="testimonials">
+        <div class="testimonials__container">
+            <div class="testimonials__signature">CBD every day</div>
+
+            <div class="pictureslider__track">
+
+                <div class="pictureslider__item picture1">
+                    <div class="picture__container">
+                        <div class="picture__stars">
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="testimonials__text">I have tried another product after using this one successfully,
+                            and I am Back for good! The flavour, the lightness of the oil and the health benefits I have
+                            gotten with this oil are amazing!</div>
+                        <div class="text__signature"><span class="signature__span"><svg aria-hidden="true" width="40px"
+                                    focusable="false" data-prefix="fal" data-icon="horizontal-rule" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445" class="span_line">
+                                    <path fill="currentColor"
+                                        d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                        class=""></path>
+                                </svg>
+                            </span>Mark J.</div>
+                    </div>
+
+                </div>
+
+                <div class="pictureslider__item picture2">
+                    <div class="testimonials__signature">CBD every day</div>
+
+                    <div class="picture__container">
+                        <div class="picture__stars">
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="testimonials__text">I have tried another product after using this one successfully,
+                            and I am Back for good! The flavour, the lightness of the oil and the health benefits I have
+                            gotten with this oil are amazing!</div>
+                        <div class="text__signature"><span class="signature__span"><svg aria-hidden="true" width="40px"
+                                    focusable="false" data-prefix="fal" data-icon="horizontal-rule" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445" class="span_line">
+                                    <path fill="currentColor"
+                                        d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                        class=""></path>
+                                </svg>
+                            </span>Bob N.</div>
+                    </div>
+
+                </div>
+
+                <div class="pictureslider__item picture3">
+                    <div class="picture__container">
+                        <div class="picture__stars">
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="testimonials__text">I have tried another product after using this one successfully,
+                            and I am Back for good! The flavour, the lightness of the oil and the health benefits I have
+                            gotten with this oil are amazing!</div>
+                        <div class="text__signature"><span class="signature__span"><svg aria-hidden="true" width="40px"
+                                    focusable="false" data-prefix="fal" data-icon="horizontal-rule" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 445" class="span_line">
+                                    <path fill="currentColor"
+                                        d="M640 247.5v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h624a8 8 0 0 1 8 8z"
+                                        class=""></path>
+                                </svg>
+                            </span>Mery K.</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="btn__pictures">
+                <div class="pictureslider__button">
+                    <button class="button__prev">←</button>
+                </div>
+                <div class="pictureslider__button">
+                    <button class="button__next">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="contact__container">
+            <div class="link__left">
+                <a class="link__name" href="#">Privacy Policy</a>
+                <a class="link__name" href="#">Terms of Use</a>
+                <a class="link__name" href="#">Return Policy</a>
+            </div>
+
+            <div class="link__center">
+                <div class="contact__title">CBD</div>
+                <div class="link__icon">
+                    <a class="icon" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="icon" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a class="icon" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="link__right">
+                <a class="link__name" href="#">SHIPPING INFO</a>
+                <a class="link__name" href="#">RETURNS / EXCHANGES</a>
+                <a class="link__name" href="#">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="form__container">
+
+            <div class="form__item">
+                <div class="form__titel">Subscribe to Newsletter</div>
+                <div class="form__box">
+                    <div class="form__controls">
+                        <label class="form__label" for="email"></label>
+                        <input class="form__input" id="email" oninput="userEmailChanged()" type="email" name="email"
+                            placeholder="Email">
+
+                    </div>
+                    <button class="form__button" onclick="buttonSubmitPressed()">→</button>
+
+                </div>
+                <span class="error_label" id="error_label">ERROR!!! You entered an invalid email!</span>
+                <span class="approv_label" id="approv_label">Thank you, we will contact you!</span>
+            </div>
+        </div>
+
+        <footer class="footer__titel">© 2018. CbD health.</footer>
+    </div>
+
+
+    <script src="./js/index.js">
+    </script>
+
+</body>
+
+</html>
